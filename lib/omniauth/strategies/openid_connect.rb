@@ -125,7 +125,8 @@ module OmniAuth
           prompt: options.prompt,
           nonce: (new_nonce if options.send_nonce),
           hd: options.hd,
-          acr_values: Array(options.acr_values).join(" ")
+          acr_values: Array(options.acr_values).join(" "),
+          ui_locales: Array(options.ui_locales).join(" ")
         }
         client.authorization_uri(opts.reject { |_k, v| v.nil? })
       end
